@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- 
+        audio 标签用来向页面中引入一个外部的音频文件，是一个替换元素。
+               音频文件引入时，默认情况下不允许用户自己控制播放停止
+            属性：
+                src 路径
+                以下几个都是无属性值的属性
+                controls 是否允许用户控制播放
+                autoplay 音频文件是否自动播放，若设置了，打开页面时自动播放，但是目前大部分浏览器不会自动播放。首次打开时考虑用户体验，不会播放
+                loop 循环播放
+     -->
+    <audio src=""  controls autoplay loop></audio>
+    <!-- 
+        不同浏览器的不同版本对audio支持性不一致，因此全面考虑个浏览器兼容性，设计严谨的语言
+        除了用src指定外部文件路径，也可用source来指定
+        下面这段，支持播放音频的浏览器就可以识别audio标签，找文件路径播放音频，但是音频不同个会可能不同浏览器支持也不一样，所以多个source放一起，执行第一个能支持的音频格式。
+                 而不支持的浏览器识别不了audio标签，但是文字总归是可以识别的，于是就在页面上显示文字，提示用户。
+     -->
+     <audio controls>
+         对不起，您的浏览器版本不支持播放音频文件，请升级浏览器！
+         <source src=".mp3">
+         <source src=".ogg">
+     </audio>
+     <!-- 
+         想兼容的话：
+         embed 标签用于在老版的浏览器中引入音频文件
+               默认自动播放
+               必须指定width和height，不然第二次播放它自己缩小了
+        但是缺点太多，不建议使用
+      -->
+      <embed src=".mp3" type="audio/mp3" width="300" height="150">
+
+
+
+
+    <!-- 
+        video 标签引入视频
+            属性使用方式和audio基本一样
+     -->
+    <video contols>
+        <source src=".webm">
+        <source src=".mp4">
+        <embed src=".mp4" type="video/mp4">
+    </video>
+
+    <!-- 
+        音频视频一把都不会放在本地服务器上，可以把自己的视频传到视频网站，再把文件引入进来，相当于访问其他服务器，把其他页面引进来。
+    -->
+</body>
+</html>

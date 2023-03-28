@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        超链接可以从一个页面跳转到 1.其他页面 2.该页面中某一个指定的其他位置
+        使用a标签来定义超链接
+        超链接a是一个行内元素，但是a里面可以嵌套除它自身之外的任何元素。
+        属性：
+            href指定跳转到的目标路径(1.网址，绝对路径   2.内部地址，相对路径)     运行出来访问过的是紫颜色，未访问过的是蓝颜色
+     -->
+     
+     <a href="">超链接</a>  
+     <br><br>    
+     <a href="05.列表.html">超链接</a> 
+    <a href="path/07.相对路径.html">学习相对路径，才能合理的使用超链接</a>
+
+     <!-- 
+         跳转页面
+         target属性：用来指定打开的位置
+               可选值：
+                    _self 默认值
+                    _blank  原页面保持，在一个新的页面中打开超连接，优点方便，缺点是容易打开很多页面不知道哪些有用
+
+      -->
+      <a href="04.语义化标签.html"></a>
+      <a href="04.语义化标签.html" target="_self"></a>
+      <a href="04.语义化标签.html" target="_blank"></a>
+      
+      
+      <!-- 
+          跳转页面其他位置
+          1.需求：页面内容很多，有滚动条，滚动最下面，如何回到顶部
+            解决：在href属性设置为#,页面不会跳转，会转到该页顶部位置
+          2.需求：去底部，底部在哪，就在最后一个标签处
+            解决：此处a是最后一个标签，给他加属性id,唯一不重复标识
+            知识点:id 属性
+                    -每一个标签都可以添加一个id属性
+                    -id属性就是元素的唯一标识，同一页面中不能出现重复的id属值
+          3.可以跳转到页面的指定位置，只需将href属性设置成 #目标元素的id属性值
+       -->
+       <!-- 键入lorem+tab键自动生成英文文本 -->
+      <a href="#bottom">去底部</a>
+      <a href="#p1">去文字第一段</a>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum mollitia similique sint velit provident sed, dolore amet corrupti illo quia laborum commodi distinctio, perferendis minima! Voluptates cum officia nihil vero.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum mollitia similique sint velit provident sed, dolore amet corrupti illo quia laborum commodi distinctio, perferendis minima! Voluptates cum officia nihil vero.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum mollitia similique sint velit provident sed, dolore amet corrupti illo quia laborum commodi distinctio, perferendis minima! Voluptates cum officia nihil vero.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum mollitia similique sint velit provident sed, dolore amet corrupti illo quia laborum commodi distinctio, perferendis minima! Voluptates cum officia nihil vero.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum mollitia similique sint velit provident sed, dolore amet corrupti illo quia laborum commodi distinctio, perferendis minima! Voluptates cum officia nihil vero.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum mollitia similique sint velit provident sed, dolore amet corrupti illo quia laborum commodi distinctio, perferendis minima! Voluptates cum officia nihil vero.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum mollitia similique sint velit provident sed, dolore amet corrupti illo quia laborum commodi distinctio, perferendis minima! Voluptates cum officia nihil vero.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum mollitia similique sint velit provident sed, dolore amet corrupti illo quia laborum commodi distinctio, perferendis minima! Voluptates cum officia nihil vero.</p>
+      <p id="p1">今天又是开心的一天，炎热的夏日挡不住孩子们参加实践活动的激情。一大早，我们整队出发，去大街小巷，做小小的我们力所能及的事，争取为营造美好的社会环境做小贡献。
+
+        </p>
+        <p>孩子们用小小的工具揭下一张张广告纸。
+        
+        </p>
+        <p>把非公共用品放在路中间，是不文明的行为哦，我们一起把它放在属于它的位置。
+        
+        </p>
+        <p>让“落叶归根”，我们可是小能手呢。
+        
+        </p>
+        <p>早上的实践活动虽小，但意义非凡，从身边的小事做起，正做文明小公民。
+        下午，我们邀请了西电的同学来给孩子们上禁毒防艾的课堂，孩子们积极踊跃，在活跃的课堂中，学到了判别不同的人给你的东西的好坏，学会了自我保护，了解了艾滋病的传播途径，艾滋病并不可怕，我们要善待身边的每一个人。
+        
+        
+        
+        
+        </p>
+       <p> 每一堂课的圆满成功，都是各位老师辛勤的付出，希望同学们都能有所收获。</p>
+        <a href="#" id="bottom">回顶部</a>
+    <!-- 
+        超连接作用还没确定的时候
+        1.在开发中，可用#作为超链接的路径的占位符，但是他还是会回到顶部
+        2.可以用javascript:;来作为href属性，此时点击这个超链接什么也不会发生
+     -->
+     <a href="#">占位符超链接</a>
+    <a href="javascript:;">什么也不会发生的超链接</a>
+     
+</body>
+
+</html>
